@@ -1,0 +1,85 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- import stitch-js -->
+    <script type="text/javascript" src="https://cdn.glitch.com/542ef627-7eda-49c0-ba0a-da8a9955aea1%2Fstitch-client.js?1557492761534"></script>
+
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- import the webpage's stylesheet -->
+    
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- As a heading -->
+      <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">SixTran</span>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-auto">
+            <h5 class="mt-0">Signup</h5>
+            <form>
+              <div class="form-group">
+                <input name="email" type="email" maxlength="100" placeholder="bob@bobsburgers.com" aria-labelledby="submit-account">
+              </div>
+              <div class="form-group">
+                <input name="first_name" type="text" maxlength="100" placeholder="Bob" aria-labelledby="submit-account">
+              </div>
+              <div class="form-group">
+                <input name="last_name" type="text" maxlength="100" placeholder="Belcher" aria-labelledby="submit-account">
+              </div>
+              <div class="form-group">
+                <input name="company" type="text" maxlength="100" placeholder="Bob's Burgers" aria-labelledby="submit-account">
+              </div>
+              <button type="submit" id="submit-account">
+                create new client
+              </button>
+            </form>
+          </div>
+          <div class="col-md-auto">
+            <h5 class="mt-0">Logs</h5>
+            <div class="text-wrap" style="width: 20rem;">
+              <p class="text-monospace" id="demo"></p> 
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-auto" id="accounts">
+            <b>Created Clients</b>
+            <table id="myAccountData" class="table">
+                <tr>
+                    <td><b>Client Name</b></td>
+                    <td><b>Client ID</b></td>
+                    <td><b>Get Session</b></td>
+                    <td><b>Connect Salesforce</b></td>
+                </tr>
+            </table>
+          </div>
+          <div class="col-sm-">
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+    </footer>
+  </body>
+</html>

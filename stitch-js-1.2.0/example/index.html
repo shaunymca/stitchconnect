@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Stitch JS Client Example</title>
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <style type="text/css">
+      html {
+        font-family: "Fira Sans", sans-serif;
+        font-size: 18px;
+      }
+      body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+      body > * + * {
+        margin-top: 2em;
+      }
+      button {
+        background: #ffcc00;
+        border: none;
+        color: #1e2023;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 0.5em 2em;
+      }
+      button:hover {
+        background-color: #1e2023;
+        color: white;
+      }
+      button:disabled,
+      button:hover:disabled {
+        background-color: #E2E2E2;
+        color: #999999;
+        cursor: default;
+      }
+      .status {
+        background-color: #e2e2e2;
+        box-sizing: border-box;
+        padding: 0.5em;
+      }
+      .status.status--in-progress {
+        background-color: #41c0ff;
+        color: #ffffff;
+      }
+      .status.status--success {
+        background-color: #66cc66;
+        color: #ffffff;
+      }
+      .status.status--failure {
+        background-color: #ed4040;
+        color: #ffffff;
+      }
+      .status .status__detail {
+        margin: 0;
+        white-space: pre-wrap;
+      }
+
+      input,
+      select {
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      label {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .container > * + * {
+        margin-top: 1em;
+      }
+      .container.container--primary > * + * {
+        margin-top: 2em;
+        width: 500px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="../dist/stitch-client.umd.js"></script>
+    <script type="text/babel" data-presets="es2015,stage-2,react" src="example.js"></script>
+  </body>
+</html>
